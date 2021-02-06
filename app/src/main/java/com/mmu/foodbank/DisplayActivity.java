@@ -8,11 +8,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+
+import com.squareup.picasso.Picasso;
 
 public class DisplayActivity extends AppCompatActivity {
 
     private EditText uname, fname, quantity, number;
     private Button btn;
+    ImageView foodie;
+    Uri imgU;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +30,7 @@ public class DisplayActivity extends AppCompatActivity {
         fname = (EditText) findViewById(R.id.etfoodname);
         quantity = (EditText) findViewById(R.id.etquantity);
         number = (EditText) findViewById(R.id.etnum);
+        foodie = findViewById(R.id.foo);
 
         Intent i = getIntent();
 
@@ -32,13 +38,18 @@ public class DisplayActivity extends AppCompatActivity {
         String food = i.getStringExtra("food");
         String quant = i.getStringExtra("quant");
         String num = i.getStringExtra("num");
+        String image = i.getStringExtra("image");
         Double x =i.getDoubleExtra("lat",0);
         Double y =i.getDoubleExtra("lng",0);
+
+        imgU = Uri.parse(image);
 
         uname.setText("Donor Name- "+name);
         fname.setText("Food Name- "+food);
         quantity.setText("Food Quantity- "+quant);
         number.setText("Donor Number- "+num);
+        Picasso.get().load(imgU).into(foodie);
+
 
         uname.setEnabled(false);
         fname.setEnabled(false);

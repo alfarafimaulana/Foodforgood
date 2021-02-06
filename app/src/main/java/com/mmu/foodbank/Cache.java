@@ -8,6 +8,8 @@ public class Cache {
     private String quantity;
     private String number;
     private Double x,y;
+    private String imageUri;
+
 
     public Long getMaxid() {
         return maxid;
@@ -57,12 +59,18 @@ public class Cache {
         this.quantity = quantity;
     }
 
-    public String getNumber() {
-        return number;
-    }
+    public String getNumber() { return number;    }
 
     public void setNumber(String number) {
         this.number = number;
+    }
+
+    public String getImageUri() {
+        return imageUri;
+    }
+
+    public void setImageUri(String imageUri) {
+        this.imageUri = imageUri;
     }
 
 

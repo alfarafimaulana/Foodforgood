@@ -64,6 +64,7 @@ public class RecieveActivity extends AppCompatActivity {
                         c.setFoodName(dataSnapshot.child(String.valueOf(i)).child("foodName").getValue(String.class));
                         c.setQuantity(dataSnapshot.child(String.valueOf(i)).child("quantity").getValue(String.class));
                         c.setNumber(dataSnapshot.child(String.valueOf(i)).child("number").getValue(String.class));
+                        c.setImageUri(dataSnapshot.child(String.valueOf(i)).child("imageUri").getValue(String.class));
                         c.setX(dataSnapshot.child(String.valueOf(i)).child("x").getValue(Double.class));
                         c.setY(dataSnapshot.child(String.valueOf(i)).child("y").getValue(Double.class));
 
@@ -74,6 +75,7 @@ public class RecieveActivity extends AppCompatActivity {
                         intent.putExtra("food",c.getFoodName());
                         intent.putExtra("quant",c.getQuantity());
                         intent.putExtra("num",c.getNumber());
+                        intent.putExtra("image",c.getImageUri());
                         intent.putExtra("lat",c.getX());
                         intent.putExtra("lng",c.getY());
 

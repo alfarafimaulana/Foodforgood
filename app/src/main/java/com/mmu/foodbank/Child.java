@@ -6,6 +6,7 @@ public class Child {
     private String foodName;
     private String quantity;
     private String number;
+    private String imageUri;
     private Double x,y;
 
     public String getUserName() {
@@ -38,6 +39,14 @@ public class Child {
 
     public void setNumber(String number) {
         this.number = number;
+    }
+
+    public String getImageUri() {
+        return imageUri;
+    }
+
+    public void setImageUri(String imageUri) {
+        this.imageUri = imageUri;
     }
 
     public Double getX() {

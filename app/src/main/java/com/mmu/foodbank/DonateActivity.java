@@ -132,7 +132,7 @@ public class DonateActivity extends AppCompatActivity {
                 nm = number.getText().toString().trim();
 
                 if (TextUtils.isEmpty(un) || TextUtils.isEmpty(fn) || TextUtils.isEmpty(qt) || TextUtils.isEmpty(nm) || TextUtils.isEmpty(imageUri)) {
-                    Toast.makeText(DonateActivity.this, "Fields must not be empty", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(DonateActivity.this, "Fields must not be empty, and the upload to finish", Toast.LENGTH_SHORT).show();
                 }
                 else {
 
